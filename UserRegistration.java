@@ -7,7 +7,11 @@ import java.util.regex.Pattern;
 	public class UserRegistration {
 		public static void main(String[] args) {
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("Chose Option-\n"+"1.Enter First Name\n"+"2.Enter Last Name\n"+"3.Enter Email Address\n"+"4.Enter Phone No\n");
+			System.out.println("Chose Option-\n"+"1.Enter First Name\n"+
+			                                     "2.Enter Last Name\n"+
+					                             "3.Enter Email Address\n"+
+			                                     "4.Enter Phone No\n"+
+					                             "5.Enter Password\n");
 			int option = scanner.nextInt();
 			switch (option) {
 			
@@ -95,9 +99,32 @@ import java.util.regex.Pattern;
 			 else
 				 
 			   System.out.println("Invali Phone No");
-			      
+			   
+			   
+	       case 5:
 	    	   
-		}
+	    	   Scanner scanner5 = new Scanner(System.in);
+		       System.out.println("Enter Password");
+
+		
+		       String password = scanner5.next();
+		 
+		       String regex5 = "^[0-9]{8,}$";
+		 
+		       Pattern pattern5 = Pattern.compile(regex5);
+			   Matcher matcher5 = pattern5.matcher(password);
+			
+			   boolean result5 = matcher5.matches();
+			   if (result5)
+				   
+			   System.out.println("Valid Password ");
+			   
+			 else
+				 
+			   System.out.println("Invalid Password");
+			   
+	    	       	   
+		   }
 
 		}
 	}
