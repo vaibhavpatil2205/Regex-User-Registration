@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 	public class UserRegistration {
 		public static void main(String[] args) {
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("Chose Option-\n"+"1.Enter First Name\n"+"2.Enter Last Name\n"+"3.Enter Email Address\n");
+			System.out.println("Chose Option-\n"+"1.Enter First Name\n"+"2.Enter Last Name\n"+"3.Enter Email Address\n"+"4.Enter Phone No\n");
 			int option = scanner.nextInt();
 			switch (option) {
 			
@@ -47,10 +47,13 @@ import java.util.regex.Pattern;
 			 boolean result2 = matcher2.matches();
 			 if (result2)
 					System.out.println("Valid lastname ");
+			 
 				else
+					
 					System.out.println("Invali lastname");
 				
 	       case 3:
+	    	   
 		      Scanner scanner3 = new Scanner(System.in);
 	          System.out.println("Enter Email Address");
 
@@ -64,15 +67,37 @@ import java.util.regex.Pattern;
 		
 		      boolean result3 = matcher3.matches();
 		      if (result3)
+		    	  
 			       System.out.println("Valid Email Address ");
+		      
 		      else
+		    	  
 		 	       System.out.println("Invali Email Address");
+		      
+	       case 4:
+	    	   
+	    	   Scanner scanner4 = new Scanner(System.in);
+		       System.out.println("Enter Phone No");
+
 		
-          
-			 
-			 
+		       String phoneno = scanner4.next();
+		 
+		       String regex4 = "^[0-9]{2}\\s{0,1}[0-9]{10}$";
+		 
+		       Pattern pattern4 = Pattern.compile(regex4);
+			   Matcher matcher4 = pattern4.matcher(phoneno);
 			
-			}
+			   boolean result4 = matcher4.matches();
+			   if (result4)
+				   
+			   System.out.println("Valid Phone No ");
+			   
+			 else
+				 
+			   System.out.println("Invali Phone No");
+			      
+	    	   
+		}
 
 		}
 	}
