@@ -123,7 +123,30 @@ import java.util.regex.Pattern;
 				 
 			   System.out.println("Invalid Password");
 			   
-	    	       	   
+			   
+	      case 6:
+	      
+	      Scanner scanner6 = new Scanner(System.in);
+	       System.out.println("Enter Password");
+
+	
+	       String password2 = scanner6.next();
+	 
+	       String regex6 = "^[A-Z]{1}+[a-zA-Z0-9]{8,}$";
+	 
+	       Pattern pattern6 = Pattern.compile(regex6);
+		   Matcher matcher6 = pattern6.matcher(password2);
+		
+		   boolean result6 = matcher6.matches();
+		   if (result6)
+			   
+		   System.out.println("Valid Password ");
+		   
+		 else
+			 
+		   System.out.println("Invalid Password");
+		   
+	          	       	   
 		   }
 
 		}
