@@ -13,7 +13,8 @@ import java.util.regex.Pattern;
 			                                     "4.Enter Phone No\n"+
 					                             "5.Enter Password\n"+
 			                                     "6.Enter Password 2\n"+
-					                             "7.Enter Password 3\n");
+					                             "7.Enter Password 3\n"+
+			                                     "8.Enter Password 4\n");
 			int option = scanner.nextInt();
 			switch (option) {
 			
@@ -173,10 +174,29 @@ import java.util.regex.Pattern;
 			   System.out.println("Invalid Password");
 			   
 	    	  
-	    	  
-	    	  
-		   
-	          	       	   
+	       case 8:
+	    	   
+	    	   Scanner scanner8 = new Scanner(System.in);
+		       System.out.println("Enter Password");
+
+		
+		       String password4 = scanner8.next();
+		 
+		       String regex8 = "^[A-Z]{1}+[a-zA-Z].*[@#$%^&*._+=].*[0-9].*{8,}$";
+		 
+		       Pattern pattern8 = Pattern.compile(regex8);
+			   Matcher matcher8 = pattern8.matcher(password4);
+			
+			   boolean result8 = matcher8.matches();
+			   if (result8)
+				   
+			   System.out.println("Valid Password ");
+			   
+			 else
+				 
+			   System.out.println("Invalid Password");
+			   
+	    	       	       	   
 		   }
 
 		}
